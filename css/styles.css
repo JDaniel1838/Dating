@@ -1,0 +1,1153 @@
+:root{
+    --Negro : #0E121B;
+    --blanco:#fff;
+    --NegroClaro:#1F2633;
+    --azul: #00D9F6;
+    --azulOpaco: #007e8f;
+    --BlancoOpaco: rgb(211, 211, 211);
+
+}
+
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: var(--Negro);
+    position: relative;
+}
+
+.header{
+    width: 99%;
+    height: 4rem;
+    max-width: 1400px;
+    margin: 0 .5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header > h1{
+    color:var(--blanco);
+    font-size: 3.75rem;
+    font-weight:900;
+    margin-left: 1rem;
+}
+
+.btnMore{
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #00D9F6;
+    border-radius: 50%;
+    margin-right: 1rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    cursor:pointer;
+}
+
+.btnMore > img{
+    width: 70%;
+    margin: 15%;
+    height: 70%;
+}
+
+.btnMore.activado{
+    background-color: var(--azul);
+}
+
+
+/* Contenedor Main */
+main{
+    width: 100%;
+    height: 26rem;
+    max-width: 1400px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor Reloj */
+.Reloj{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CirculoGrande{
+    width: 25rem;
+    height: 25rem;
+    /* animation: CambioColorAzul 8s ease  infinite alternate both; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px 0 rgba(0, 216, 245, 0.493);
+}
+
+
+.circuloPequenio{
+    width: 24rem;
+    height: 24rem;
+    background-color: var(--Negro);
+    border-radius: 50%;
+    display: flex;
+
+    /* Estilos para no seleccionar text */
+    -moz-user-select: none; 
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    cursor: pointer;
+}
+
+.numbers{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.numbers.activado{
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.numbers>.NumHors{
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--blanco);
+}
+
+.numbers >.NumMinuts{
+    font-size: 4rem;
+    color: var(--blanco);
+    font-weight: 900;
+    margin-bottom: .5rem;
+}
+
+.numbers > .NumSeg{
+    font-size: 1.5rem;
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+
+/* Segundo contenedor de number */
+.ClockNumbers{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.ClockNumbers.activado{
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ClockNumbers > .ClockHrs{
+    font-size: 11rem;
+    color: var(--blanco);
+    font-weight: 900;
+    margin-top: -3rem;
+}
+
+.ClockNumbers > .ClockTime{
+    font-size: 4rem;
+    color: var(--blanco);
+    font-weight: 700;
+    margin-top: -1rem;
+}
+
+
+
+
+/* Contenedor Notas */
+.Notas{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+}
+
+.Notas > h2{
+    font-size: 3rem;
+    color: var(--blanco);
+    height: 8%;
+    width: 100%;
+    text-align: start;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.Notas > .NotaGrande{
+    width: 100%;
+    height: 90%;
+    max-height: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* animation: CambioColorAzul 8s ease  infinite alternate both; */
+    background-color: var(--blanco);
+}
+
+.Notas > .NotaGrande >.NotaPequenia{
+    width:  calc(100% - .7rem);
+    height:  calc(100% - .5rem);
+    background-color: var(--NegroClaro);
+    border-radius: 20px;
+    
+    position: relative;
+}
+
+.Notas > .NotaGrande >.NotaPequenia > img{
+    position: absolute;
+    width: 3.5rem;
+    height: auto;
+    background-color: var(--azul);
+    border-radius: 50%;
+    bottom: 1rem;
+    right: 1rem;
+    padding: .5rem;
+    transition: .3s;
+    box-shadow: 0 0 8px 0 rgba(0, 216, 245, 0.493);
+}
+
+
+.Notas > .NotaGrande >.NotaPequenia > img:hover{
+    background-color: var(--blanco);
+    cursor: pointer;
+    box-shadow: 0 0 0 0;
+}
+
+.Notas > .NotaGrande >.NotaPequenia >.contentNotes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    max-height: 366px;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.Notas > .NotaGrande >.NotaPequenia >.contentNotes > p{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--blanco);
+}
+
+
+.Notas > .NotaGrande >.NotaPequenia >.contentNotes.activado{
+    width: 100%;
+    height: 100%;
+    max-height: 366px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: start;
+    overflow-y: scroll;
+}
+
+/* Estilos Scroll */
+/* Si lo vas a usar primero define su ancho y largo */
+.Notas > .NotaGrande >.NotaPequenia >.contentNotes::-webkit-scrollbar {
+    width: 10px;     /* Tamaño del scroll en vertical */
+    height: 6px; 
+}
+
+.Notas > .NotaGrande >.NotaPequenia >.contentNotes::-webkit-scrollbar-thumb {
+    background: var(--azul);
+    border-radius: 4px;
+}
+
+
+.Notas > .NotaGrande >.NotaPequenia >.contentNotes::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 50px;
+    margin: 1rem 0;
+}
+/* ------------------- */
+
+.Notas > .NotaGrande >.NotaPequenia >.contentNotes > div{
+    width: 95%;
+    height: auto;
+    margin-left: 2%;
+    margin-top: 2rem;
+    padding: 1rem .5rem;
+    background-color: var(--Negro);
+    border-radius: 20px;
+    color:var(--blanco);
+    
+}
+
+
+
+/* Margen a ultimo elemento de contenedor */
+.Notas > .NotaGrande >.NotaPequenia >.contentNotes > div:last-child{
+    margin-bottom: 5rem;
+}
+
+.Notas > .NotaGrande >.NotaPequenia >.contentNotes > div > h4{
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding: .5rem 0;
+}
+
+.Notas > .NotaGrande >.NotaPequenia >.contentNotes > div >.Text{
+    text-align: justify;
+    padding: 0 .5rem .5rem .5rem;
+}
+
+.Notas > .NotaGrande >.NotaPequenia >.contentNotes > div>.Date{
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: right;
+    padding-right:1rem ;
+}
+
+
+
+/* Fotter */
+footer{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer > .containerProyecto{
+    width: 68%;
+    height: 80%;
+    margin: 10% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* animation: CambioColorAzul 8s ease  infinite alternate both; */
+    background-color: var(--blanco);
+    border-radius: 10px;
+}
+footer >.containerProyecto> .ContainerProyectosmall{
+    width: 99.5%;
+    height: 95%;
+    background-color: var(--Negro);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--blanco);
+    padding-left:2rem ;
+}
+
+
+footer >.containerProyecto> .ContainerProyectosmall.activado{
+    align-items: flex-start;
+
+}
+
+footer >.containerProyecto> .ContainerProyectosmall > h5{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+footer >.containerProyecto> .ContainerProyectosmall > h6{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer >.containerProyecto> .ContainerProyectosmall > p{
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+footer > .containerBtnPower{
+    width: 30%;
+    height: 80%;
+    margin: 10% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Estilos para no seleccionar text */
+    cursor: pointer;
+}
+
+footer > .containerBtnPower > .containerBtnPowerBig{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > .containerBtnPower > .containerBtnPowerBig>.containerBtnPowerSmall{
+    width: calc(6rem - 5px);
+    height: calc(6rem - 5px);
+    background-color: var(--NegroClaro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > .containerBtnPower > .containerBtnPowerBig>.containerBtnPowerSmall > img{
+    width: 65%;
+    height: 65%;
+}
+
+/* ESTILOS FORMULARIO */
+.formulario, .formProyect, .Intrucciones{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    
+}
+
+
+.formulario.activado{
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: hsla(219, 24%, 16%, 0.952);
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.formProyect.activado{
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: hsla(219, 24%, 16%, 0.952);
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.formulario > form{
+    width: 60%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+
+.formulario > form>h4{
+    color: var(--blanco);
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+.formulario > form > .TitleCambio, .DescriptionForm{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--azul);
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.formulario > form > .TitleCambio > input{
+    width: 100%;
+    padding: .3rem;
+    margin: auto;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+
+
+.formulario > form > .DescriptionForm > textarea{
+    width: 100%;
+    height: 10rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    resize: none;
+    font-family: 'Lato', sans-serif;
+    margin: 1rem 0;
+}
+
+.formulario > form > .TitleCambio > input:focus{
+    outline: none;
+    border: solid 2px var(--azul);
+    padding: .3rem;
+}
+
+
+.formulario > form > .DescriptionForm > textarea:focus{
+    outline: none;
+    border: solid 2px var(--azul);
+}
+
+.formulario > form> button{
+    background-color: var(--azul);
+    font-size: 1.5rem;
+    color: var(--blanco);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    padding: .8rem .5rem;
+    border-radius: 20px;
+    border: solid 2px transparent;
+    cursor: pointer;
+}
+
+.formulario > form> button:focus{
+    outline: none;
+    border: solid 2px var(--blanco);
+}
+
+/* ---------------------------------- */
+
+
+/* Formulario de Nuevo Proyecto */
+.formProyect.activado{
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: hsla(219, 24%, 16%, 0.952);
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.formProyect > form{
+    width: 50%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+
+.formProyect > form>h4{
+    color: var(--blanco);
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+.formProyect > form > .TitleProyect, .DescriptionProyect{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--azul);
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.formProyect > form > .TitleProyect > input{
+    width: 100%;
+    padding: .3rem;
+    margin: auto;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+
+
+.formProyect > form > .DescriptionProyect > textarea{
+    width: 100%;
+    height: 10rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    resize: none;
+    font-family: 'Lato', sans-serif;
+    margin: 1rem 0;
+}
+
+.formProyect > form > .TitleProyect > input:focus{
+    outline: none;
+    border: solid 2px var(--azul);
+    padding: .3rem;
+}
+
+
+.formProyect > form > .DescriptionProyect > textarea:focus{
+    outline: none;
+    border: solid 2px var(--azul);
+}
+
+.formProyect > form> button{
+    background-color: var(--azul);
+    font-size: 1.5rem;
+    color: var(--blanco);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    padding: .8rem .5rem;
+    border-radius: 20px;
+    border: solid 2px transparent;
+    cursor: pointer;
+}
+
+.formProyect > form> button:focus{
+    outline: none;
+    border: solid 2px var(--blanco);
+}
+
+
+
+/* Card de campos vacíos */
+.CamposVacios{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.CamposVacios.activado{
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    height: 30%;
+    background-color: #0E121B;
+    top: 35%;
+    left: 35%;
+    width: 30%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 6px 0 rgba(0, 217, 246, 0.644);
+    font-size: 1.7rem;
+    color: var(--azul);
+    font-weight: 700;
+    border: 2px solid var(--azul);
+    z-index: 55;
+}
+
+.CamposVacios > button{
+    background-color: var(--azul);
+    font-size: 1rem;
+    color: var(--blanco);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    padding: .3rem .2rem;
+    border-radius: 20px;
+    border: solid 2px transparent;
+    cursor: pointer;
+    margin: 1rem 0 0 0;
+}
+
+
+.CamposVacios > button:focus{
+    outline: none;
+    border: solid 2px var(--blanco);
+}
+
+
+/* Estilos de card al eliminar proyecto */
+.CamposVacios > div{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.CamposVacios > .bgBlanco{
+    color: var(--blanco);
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+.CamposVacios > div > button{
+    background-color: var(--blanco);
+    font-size: 1.1rem;
+    color: var(--NegroClaro);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    padding: .3rem .2rem;
+    border-radius: 20px;
+    border: solid 2px transparent;
+    cursor: pointer;
+    margin: 1rem 0 0 0;
+}
+
+.CamposVacios > div>button:focus{
+    outline: none;
+    border: solid 2px var(--azul);
+}
+
+/* Estilos de boton exit del formulario. */
+.BtnExitForm{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.BtnExitForm.activado{
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--azul);
+    box-shadow: 0 0 8px 0 rgba(0, 217, 246, 0.493);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 10;
+    cursor: pointer;
+    z-index: 55;
+}
+
+.BtnExitForm > img{
+    width: 3.5rem;
+    height: 3.5rem;
+    padding:.5rem;
+    
+}
+
+
+
+.AnimacionAzul{
+    animation: CambioColorAzul 8s ease  infinite alternate both;
+}
+
+.AnimacionBlanco{
+    animation: CambioColorBlanco 8s ease  infinite alternate both;
+}
+
+
+
+/* Estilos de contenedor de instrucciones */
+.Intrucciones.activado{
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    position: absolute;
+    background-color: hsla(219, 24%, 16%, 0.952);
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Intrucciones>h3{
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.Intrucciones > .ContainerIntruccions{
+    width: 65%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Intrucciones > .ContainerIntruccions > .ContainerIntruccionsSmall{
+    width: 95%;
+    height: 95%;
+    background-color: var(--Negro);
+    border: 2px solid #00D9F6;
+    box-shadow: 0 0 6px 0 rgba(0, 217, 246, 0.486);
+    border-radius: 20px;
+    color: var(--blanco);
+    padding: 1rem;
+    text-align: justify;
+}
+
+.Intrucciones > .ContainerIntruccions > .ContainerIntruccionsSmall> h4 {
+    font-size: 1.5rem;
+    padding-bottom:1rem ;
+}
+
+.Intrucciones > .ContainerIntruccions > .ContainerIntruccionsSmall>p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-bottom:1rem ;
+}
+
+.Intrucciones > .ContainerIntruccions > .ContainerIntruccionsSmall>p >span{
+    font-weight: 700;
+    color: #00D9F6;
+
+}
+
+
+
+.Intrucciones >.ContainerBtnSpecials{
+    width: 35%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Intrucciones >.ContainerBtnSpecials > *{
+    width: 80%;
+    margin: top 1rem ;
+}
+
+.Intrucciones > .ContainerBtnSpecials> .btnDetateProyect,.btnImprimirDocument{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
+
+.Intrucciones > .ContainerBtnSpecials > .btnDetateProyect > button, .Intrucciones > .ContainerBtnSpecials > .btnImprimirDocument > button{
+    background-color: var(--azul);
+    font-size: 1.5rem;
+    color: var(--blanco);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    padding: .8rem .5rem;
+    border-radius: 20px;
+    border: solid 2px transparent;
+    cursor: pointer;
+}
+
+.Intrucciones > .ContainerBtnSpecials > .btnDetateProyect > button:focus,.Intrucciones > .ContainerBtnSpecials > .btnImprimirDocument > button:focus{
+    outline: none;
+    border: solid 2px var(--blanco);    
+}
+
+.Intrucciones > .ContainerBtnSpecials > .creditoDisenio{
+    height: 7rem;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Intrucciones > .ContainerBtnSpecials > .creditoDisenio> h6{
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.Intrucciones > .ContainerBtnSpecials > .creditoDisenio> p{
+    font-size: 1rem;
+}
+
+.Intrucciones > .ContainerBtnSpecials > .creditoApp{
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Intrucciones > .ContainerBtnSpecials > .creditoApp > h3{
+    color:var(--blanco);
+    font-size: 3.75rem;
+    font-weight:900;
+    padding-bottom: .5rem;
+}
+
+.Intrucciones > .ContainerBtnSpecials > .creditoApp > p{
+    color:var(--blanco);
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Loader en espera de carga del reloj */
+.spinner{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.spinner.activado {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    margin:  auto;
+}
+
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #00D9F6;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+@keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+
+
+
+/* Animaciones cambio de color */
+@keyframes CambioColorAzul{
+    0%{
+        background-position: var(--azul);
+    }
+
+    30%{
+        background-color: var(--azul);
+    }
+
+    50%{
+        background-color: var(--azul);
+    }
+
+    75%{
+        background-color: var(--azulOpaco);
+    }
+
+    100%{
+        background-color: var(--azul);
+    }
+}
+
+
+@keyframes CambioColorBlanco{
+    0%{
+        background-position: var(--blanco);
+    }
+
+    30%{
+        background-color: var(--blanco);
+    }
+
+    50%{
+        background-color: var(--blanco);
+    }
+
+    75%{
+        background-color: var(--blanco);
+    }
+
+    100%{
+        background-color: var(--BlancoOpaco);
+    }
+}
+
+
+/* Responsive Web Desing */
+
+
+@media screen and (max-width: 1275px) {
+    html {
+        font-size: 15px;
+    }
+
+    main{
+        justify-content:  space-evenly;
+    }
+
+    .Notas{
+        width: 55%;
+    }
+
+    .Intrucciones > .ContainerIntruccions > .ContainerIntruccionsSmall> h4 {
+        font-size: 1.3rem;
+    }
+
+    .Intrucciones > .ContainerIntruccions > .ContainerIntruccionsSmall>p {
+        font-size: 1rem;
+    }
+
+}
+
+
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 14px;
+    }
+    main{
+        flex-wrap: wrap;
+        height: 54rem;
+    }
+    .Reloj{
+        width: 100%;
+        height: 43%;
+    }
+
+    .Notas{
+        width: 90%;
+        height: 57%;
+        margin: 2% auto;
+    }
+
+    .Intrucciones.activado {
+        flex-wrap: wrap;
+    }
+
+    .Intrucciones>.ContainerIntruccions{
+    width: 95%;
+    height: 40%;
+    margin-top: 3rem;
+    }
+
+    .Intrucciones >.ContainerBtnSpecials {
+        width: 95%;
+        height: 40%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .Intrucciones >.ContainerBtnSpecials > *{
+        width: 45%;
+        margin: top 1rem ;
+    }
+
+    .Intrucciones > .ContainerIntruccions > .ContainerIntruccionsSmall> h4 {
+        font-size: 1.5rem;
+    }
+
+    .Intrucciones > .ContainerIntruccions > .ContainerIntruccionsSmall>p {
+        font-size: 1.1rem;
+    }
+
+    footer > .containerProyecto {
+        width:80%;
+        margin: 5% 2.5%;
+    }
+
+    footer > .containerBtnPower {
+        width: 15%;
+    }    
+    
+}
+
+
+@media screen and (max-width: 800px) {
+    html{
+        font-size: 13px;
+    }
+
+    footer > .containerBtnPower > .containerBtnPowerBig {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    footer > .containerBtnPower > .containerBtnPowerBig>.containerBtnPowerSmall {
+        width: calc(5rem - 5px);
+        height: calc(5rem - 5px);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    html{
+        font-size: 12.5px;
+    }
+
+    .Intrucciones>.ContainerIntruccions {
+        height: 50%;
+    }
+
+    .Intrucciones >.ContainerBtnSpecials {
+        height: 30%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html{
+        font-size: 12px;
+    }
+    .Intrucciones>.ContainerIntruccions {
+        height: 60%;
+    }
+
+    .Intrucciones >.ContainerBtnSpecials {
+        height: 20%;
+    }
+}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir Documento</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/htmlSecundario.css"type="text/css" media="print">
+    
+</head>
+<body>
+    <header style="width: 100%;
+    margin: 0 auto;
+    max-width: 595px;
+    height: 3.5rem;
+    color: #fff;
+    background-color: #00D9F6;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    align-items:center;">
+        <h1>Pagina Oficial de Oasis 4 You</h1>
+    </header>
+   
+    <main>
+        <section class="Fechas">
+            <div class="fecha1">
+                <div class="fechasText"><p>FECHA DE INICIO</p></div>
+            </div>
+            <div class="fecha2">
+                <div class="fechasText"><p>FECHA DE INICIO</p></div>
+            </div>
+            <div class="fecha3">
+                <div class="fechasText"><p>FECHA DE INICIO</p></div>
+            </div>
+        </section>
+
+        <section class="Cambios">
+            <div>
+                <h3></h3>
+                <h4></h4>
+                <p></p>
+            </div>
+        </section>
+        <button id="BtnImprimir">Imprimir</button>
+    </main>
+    <script>
+        const d= document,
+        Boton=d.getElementById("BtnImprimir");
+
+        Boton.addEventListener("click",(e)=>{
+            window.print();
+        });
+    </script>
+</body>
+</html>

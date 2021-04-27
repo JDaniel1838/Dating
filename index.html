@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- LINKS CSS -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Dating</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>Dating</h1>
+            <div class="btnMore">
+                <img src="icons/menu.svg" alt="menuMore">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="Reloj">
+            <div class="CirculoGrande AnimacionBlanco">
+                <div class="circuloPequenio">
+                    <div class="numbers activado">
+                        <div class="NumHors">
+                            09:20:12
+                        </div>
+                        <div class="NumMinuts">
+                            PM
+                        </div>
+                    </div>
+
+                    <div class="ClockNumbers ">
+                        <div class="ClockHrs">
+                            12
+                        </div>
+                        <div class="ClockTime">
+                            <span class="ClockMinuts">12</span>m  <span class="ClockSegundos">12</span>s
+                        </div>
+                    </div>
+
+                    <div class="spinner">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Notas">
+            <h2>Notas:</h2>
+            <div class="NotaGrande">
+                <div class="NotaPequenia">
+                    <div class="contentNotes ">
+                        <!-- <div>
+                            <h4>Pagina Oficial del grupo oasis 4you</h4>
+                            <p class="Text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus tempore aperiam amet dignissimos dolor ullam quasi iusto neque quo assumenda, quibusdam eius. Molestiae voluptates nesciunt ratione asperiores, ipsa facilis labore a minima qui eaque nostrum aperiam quam veritatis perferendis. Perspiciatis, illum. Suscipit, architecto animi! Magni pariatur ipsa consectetur fuga! Quidem, vitae error aspernatur voluptas cupiditate nulla repudiandae voluptate dolores iste minus sequi provident esse, suscipit vel dignissimos quia reprehenderit, totam doloribus earum. Consequuntur, reprehenderit illo est necessitatibus veniam illum perferendis suscipit veritatis dolorum. Illo modi corporis eveniet soluta voluptatibus exercitationem doloribus repudiandae obcaecati aperiam! Facere cum earum repellat. Laudantium, eveniet.</p>
+                            <p class="Date">24/02/2020 10:30 PM</p>
+                        </div> -->
+
+                        <p>No tienes notas</p>
+                    
+                    </div>
+                    <img src="icons/add.svg" alt="añiadir" id="ImgAdd">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="containerProyecto">
+            <div class="ContainerProyectosmall">
+                <!-- <h5>Nombre del Proyecto : Oasis Pagina Oficial </h5>
+                <h6>Cambios: 17 cambios en las ultimas 24 hrs.</h6> -->
+                <p>Aun no tienes un proyecto</p>
+            </div>
+        </div>
+
+        <div class="containerBtnPower">
+            <div class="containerBtnPowerBig AnimacionAzul">
+                <div class="containerBtnPowerSmall">
+                    <img src="icons/power.svg" alt="BtnPower" class="ImgBtnPowe">
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <div class="formulario">
+        <form>
+            <h4>Agregar cambio</h4>
+            <p class="TitleCambio">Cambio realizado: <input type="text" name="Inputitulo" id="Inputitulo" autocomplete="off" required></p>
+            <p class="DescriptionForm">Descripción:<br> <textarea required id="InputTextarea"></textarea></p>
+            <button type="submit" class="enviarForm">Enviar</button>
+        </form>
+    </div>
+
+    <div class="formProyect">
+        <form>
+            <h4>Agregar Nuevo Proyecto</h4>
+            <p class="TitleProyect">Nombre del proyecto: <input type="text" name="Inputitulo" id="InputTitleProyect" autocomplete="off" required></p>
+            <p class="DescriptionProyect">Descripción del proyecto:<br> <textarea required id="InputTextProyect"></textarea></p>
+            <button type="submit" class="enviarProyect">Comenzar</button>
+        </form>
+    </div>
+
+    <!-- <div class="CamposVacios">
+        <h6 class="TextCamposVacios bgBlanco">¿Estas seguro de eliminar el proyecto?</h6>
+        <div>
+            <button id="BtnDelateProyect">Aceptar</button>
+            <button id="BtnCamposVacios">Regresar</button>
+        </div>
+    </div> -->
+
+    <div class="CamposVacios">
+        <h6 class="TextCamposVacios">No puedes dejar campos vacíos.</h6>
+            <button id="BtnCamposVacios">Regresar</button>
+    </div>
+
+    <div class="BtnExitForm">
+        <img src="icons/close.svg" alt="close_icon">
+    </div>
+
+    <div class="Intrucciones ">
+        <h3>Instrucciones</h3>
+        <div class="ContainerIntruccions">
+            <div class="ContainerIntruccionsSmall">
+                <h4>Esta herramienta online te permite llevar un control de los cambios en un proyecto, y al final imprimir un documento con toda la información.</h4>
+                <p><span>1. </span>Para comenzar un proyecto, da click al botón iniciar </p>
+                <p><span>2. </span>Ingresa el nombre y descripción del proyecto</p>
+                <p><span>3. </span>En el apartado "Notas" tendrás todos los cambios que has agregado con su fecha y hora.</p>
+                <p><span>4. </span>El cronometro, lleva el tiempo que llevan en el proyecto, cada que pauses el proyecto, el cronometro se pausara.</p>
+                <p><span>5. </span>Una vez terminado el proyecto, regresa a este apartado e imprime el documento. (Te genera un documento en PDF con toda la información).</p>
+                <p><span>6. </span>Si quieres eliminar el proyecto, regresa a este apartado y da click en "Eliminar proyecto".</p>
+            </div>
+        </div>
+        <div class="ContainerBtnSpecials">
+            <div class="btnDetateProyect">
+                <button id="BtnImprimir">Imprimir Documentos</button>
+            </div>
+            <div class="btnImprimirDocument">
+                <button id="BtnDeleteDocument">Eliminar Proyecto</button>
+            </div>
+            <div class="creditoDisenio">
+                <h6>Diseñado por JDaniel</h6>
+                <p><i>j.danielesp8062@gmail.com</i></p>
+            </div>
+            <div class="creditoApp">
+                <h3>Dating</h3>
+                <p>© Derechos Reservados 2021-2022 <br> JDaniel.com Derechos de Contenido Reservados.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/html2canvas.min.js"></script>
+    <script src="js/moment-with-locales.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
